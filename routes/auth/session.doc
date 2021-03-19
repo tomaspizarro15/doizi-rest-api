@@ -1,0 +1,17 @@
+.GET => http://dom-name/session
+
+Headers =>
+ Content-Type : String,
+ Authorization : JW Token,
+
+Requirements in Controller : Token 
+
+Functionality => 
+Check the Validity of the JWT. if valid Return 200 , if not 401/409.
+
+Return => 
+{
+    "status" : number, 
+    //optional 
+    "user" :{...obj}
+}

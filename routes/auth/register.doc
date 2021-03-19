@@ -1,0 +1,26 @@
+REGISTER ROUTES/ENDPOINTS
+
+
+user/register
+
+POST
+------------------------------------------------------------------
+This endpoints requires 6 Arguments in the REQUEST body :>
+
+name : String
+lastname : String 
+username : String
+email : String type Email 
+password : String
+confirmation : String
+
+Returns to de client :>
+
+3 Status 
+
+409 Conflict  ------> If the request does not  pass the Express custom validator 
+error object appended
+401 Unauthorized ------> If the request does not pass the body validator wroten in controller
+error object appended
+array of errors with message
+201 Created ---------> If the request is correct
